@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+.ContCards{
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.contentFilters {
+    height: 60px;
+    border-radius: 0px 0px 30px 30px;
+    padding: 1px 53px;
+    border: none;  
+    margin-left: 10px; 
+    margin-right: 10px;  
+}
+
+.contentFilters img {
+    width: 120px;
+    border-radius: 30% 30% 0 0;
+    justify-content: space-between;
+    margin-right: 40px;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+}
+
+.filters{
+    color: aliceblue;
+    font-weight:bolder;
+    background-color:#000000;
+    flex-direction: row;
+    padding: 8px 13px;
+    cursor: pointer;  
+    border-radius: 0px 30px 30px 30px;
+    box-shadow: 3px 3px 10px rgb(0, 0, 0); 
+    margin-left: 10px; 
+    margin-right: 10px;
+    margin-top: 10px;
+    font-family: 'Roboto Mono', monospace;
+    transition: all 0.4s;
+
+}
+.filters:hover {
+    transform: scale(1.03);
+    background-color: rgb(204, 157, 3);
+    color: rgb(0, 0, 0);
+  }

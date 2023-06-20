@@ -1,0 +1,28 @@
+.searchbar button {
+  padding: 6px 30px;
+  border: none;      
+  border-top-right-radius: 10px;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  transition: all 0.5s;
+  font-family: 'Roboto Mono', monospace;
+  font-style: italic;
+}
+
+.searchbar button:hover {
+  color: rgb(0, 0, 0);
+  background-color:  rgb(204, 157, 3);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.searchbar input {
+  border: none;      
+  height: 60%; 
+  margin-top: 6px;
+  border-top-left-radius: 10px;
+  padding: 7px 30px;
+  box-shadow: -8px 9px 14px -3px rgba(0,0,0,0.9);
+  font-family: 'Roboto Mono', monospace;
+}

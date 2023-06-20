@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+.globalContent {
+    background-size: cover;
+    width: 100;
+    height: 93vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+}
+
+.create{
+    background: url("https://images2.alphacoders.com/116/thumb-1920-1160159.png");
+    background-size: cover;
+    box-shadow: -8px 9px 14px -3px rgba(0,0,0,0.75);
+    margin: 2%;
+    padding: 12px;
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    text-align: right;  
+}
+
+.create h2{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.create input {
+    border: none;      
+    height: 10px; 
+    margin-top: 5px;
+    border-top-right-radius: 2px;
+    padding: 7px 30px;
+    box-shadow: 3px 3px 10px rgb(61, 35, 139);
+    font-family: 'Roboto Mono', monospace;
+}
+.create img {
+    width: 5%;
+    height: 13%;
+}
+.create label {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.create button {
+    margin: 10px;
+    padding: 10px;
+    border: none;      
+    border-radius: 5px;
+    background-color:aliceblue;
+    color:black; 
+    transition: all 0.2s;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+}
+
+.create button:hover {
+    background-color: rgb(0, 0, 0);
+    color: aliceblue; 
+    cursor: pointer;
+}
+
+.validation {
+    margin: 2%;
+    height: 10px; 
+    padding: 10px;    
+    background: rgba(98, 45, 223, 0.301) ;
+    background-size: cover;
+    border-radius: 20px;
+    width: 50%;
+    height: 80%;
+    box-shadow: -8px 9px 14px -3px rgb(61, 35, 139);
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+}
+
+.validation li {
+    font-family: 'Roboto Mono', monospace;
+    font-size: .8rem;   
+    color: aliceblue;
+    height: 30px; 
+}
+
+.validation p {
+    font-family: 'Roboto Mono', monospace;
+    font-size:15px;
+    margin: 5%;
+    height: 70px;
+    margin: 20px;
+    text-align: justify;   
+}
+
+.validation h2{
+    font-family: 'Roboto Mono', monospace;
+    margin: 5%;
+}
