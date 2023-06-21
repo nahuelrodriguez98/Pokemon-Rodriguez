@@ -8,12 +8,12 @@ const Searchbar = () => {
     const dispatch = useDispatch();
     
     const handleChange = (event) => {
-        setName(event.target.value);
+        setName(event.target.value);//Cada vez que el usuario escribe, se actualiza el valor de name con el valor actual del campo.
     }
 
     const onSearch = (event) => {
         event.preventDefault()
-        if(name.trim() !== ''){
+        if(name.trim() !== ''){//Si el campo de búsqueda no está vacío
             dispatch(getByNamePokemon(name));
         }
     }

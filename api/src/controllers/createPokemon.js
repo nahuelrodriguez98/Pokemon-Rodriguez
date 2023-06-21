@@ -8,7 +8,7 @@ const createPokemon = async (pokemonData) => {
   const pokemonExist = await Pokemon.findAll({
       where: {
         name: {
-            [Op.iLike]: `${name}`,    //Condiciono que el name del nuevo pokemon no sea igual a alguno de la DB o lo contenga. 
+            [Op.iLike]: `${name}`,  //Condiciono que el name del nuevo pokemon no sea igual a alguno de la DB o lo contenga. 
         }
      }
     })
@@ -16,12 +16,16 @@ const createPokemon = async (pokemonData) => {
   if(pokemonExist.length) throw new Error("There is already a pokemon with that name.");
     
   const newPokemon = await Pokemon.create({id,name,image,hp,attack,defense,speed,height,weight});
-
-  const types = [ typeOne, typeTwo === null || typeTwo === undefined ? '' : typeTwo ]
+  //Creo un nuevo pokemon con los valores ingresados por parametro
+  
+  const types = [ typeOne, typeTwo === null || typeTwo === undefined ? '' 
+  : typeTwo ]
  
   for (const type of types) {
     const eachType = await Type.findOne({
-        where: {name: type}
+        where: {
+          name: type
+        }
     })
 
 await newPokemon.addType(eachType)

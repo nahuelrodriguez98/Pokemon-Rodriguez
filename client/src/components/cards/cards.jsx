@@ -11,8 +11,8 @@ const CardsContainer = () => {
   const types = useSelector(state => state.types);
 
   //Paginado
-  const [page, setPage] = useState(1);
-  const viewPage = 12;
+  const [page, setPage] = useState(1);//página actual
+  const viewPage = 12;//cantidad de pokes que se mostrarán por página.
   const lastPage = page * viewPage;
   const firstPage = lastPage - viewPage;
   const viewPokemons = pokemons.slice(firstPage, lastPage);
@@ -20,7 +20,7 @@ const CardsContainer = () => {
   const dispatch = useDispatch();
 
   const paginado = (pageNum) => {
-    setPage(pageNum);
+    setPage(pageNum);//controla el cambio de pagina
   };
 
   const handleFiltersTypes = (event) => {
@@ -45,6 +45,7 @@ const CardsContainer = () => {
     dispatch(cleanInfoFilters())
     dispatch(getAllPokemons())
   }
+  
   return (
     <div>
       <div className={style.contentFilters} >

@@ -5,7 +5,6 @@ const initialState = {
     allPokemons: [],
     pokemonDetails: {},
     types: [],
-
     filterInfo:[],
     errors:{},
   }
@@ -57,13 +56,15 @@ const rootReducer = (state = initialState,action) =>{
 
         case FILTER_POKEMONS: 
             const pokemonApi = state.allPokemons;
-            const createFilter =(action.payload === "Stored")? pokemonApi.filter((pokemon) => pokemon.createInDb === false) :
-             (action.payload === "Created") ? pokemonApi.filter((pokemon) => pokemon.createInDb === true)
-             : pokemonApi
+            const createFilter =(action.payload === "Stored") ? pokemonApi.filter((pokemon) => pokemon.createInDb === false) 
+
+            :(action.payload === "Created") ? pokemonApi.filter((pokemon) => pokemon.createInDb === true)
+            : pokemonApi
             return{
                 ...state,
                 pokemons: createFilter || pokemonApi,
-                filterInfo: (action.payload === "AllPokemons")? [] : [action.payload]            }
+                filterInfo: (action.payload === "AllPokemons")? [] 
+                : [action.payload]            }
 
         case ORDER_POKEMONS: 
             const pokemons = state.pokemons.slice();     
@@ -71,11 +72,13 @@ const rootReducer = (state = initialState,action) =>{
                     if (a.name < b.name) return 1;
                     if (a.name > b.name) return -1;  
                     return 0;
-                }) : (action.payload === 'Ascendente')? pokemons.sort((a,b) => {         
+                }) 
+                : (action.payload === 'Ascendente')? pokemons.sort((a,b) => {         
                     if (a.name < b.name)  return -1;
                     if (a.name > b.name) return 1;
                     return 0;
-                }) : pokemons)
+                }) 
+                : pokemons)
             return{
             ...state,
             pokemons: Sort

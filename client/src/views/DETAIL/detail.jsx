@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import style from "./detail.module.css"
 
 const Detail = () => {
-  const { id } = useParams()
+  const { id } = useParams(); //Obtenemos Id de la url
   const dispatch = useDispatch();
   const pokemon = useSelector(state => state.pokemonDetails)
 

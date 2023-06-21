@@ -10,10 +10,10 @@ import {
   FILTER_POKEMONS,
   ORDER_POKEMONS,
   CLEAN_INFO_FILTERS,
-  } from '../actiontypes/actiontypes'
+} from '../actiontypes/actiontypes'
 
 export const getAllPokemons = () => {
-  return async function(dispatch) {
+  return async function (dispatch) {
     try {
       const response = await axios.get(`/pokemons`)
       return dispatch({
@@ -22,7 +22,7 @@ export const getAllPokemons = () => {
       })
     } catch (error) {
       return ({
-        payload:error,
+        payload: error,
       });
     }
   };
@@ -71,32 +71,38 @@ export const getByNamePokemon = (name) => {
         payload: response.data,
       });
     } catch (error) {
-     dispatch({
-      type:"ERROR",
-      payload: error,
-     });
-     alert("Sorry, this pokemon doesn't exist")
+      dispatch({
+        type: "ERROR",
+        payload: error,
+      });
+      alert("Sorry, this pokemon doesn't exist")
     }
   };
 };
 
 export const createPokemon = (pokemon) => {
   return function () {
-     axios.post('/pokemons', pokemon)
-      .catch ((error)=>  alert(
+    axios.post('/pokemons', pokemon)
+      .catch((error) => alert(
         "The game could not be created: it doesn't meet the validation requirements."
-      ))}}
+      ))
+  }
+}
 
 export const cleanDetailPokemon = () => {
-  return { type: CLEAN_DETAIL };};
+  return { type: CLEAN_DETAIL };
+};
 
 export const filterTypesPokemons = (payload) => {
-  return { type: FILTER_TYPES, payload };};
+  return { type: FILTER_TYPES, payload };
+};
 
 export const filterPokemons = (payload) => {
-  return { type: FILTER_POKEMONS, payload };};
+  return { type: FILTER_POKEMONS, payload };
+};
 
 export const orderPokemons = (payload) => {
-  return { type: ORDER_POKEMONS, payload };};
+  return { type: ORDER_POKEMONS, payload };
+};
 
-  export const cleanInfoFilters = () => { return {type: CLEAN_INFO_FILTERS }} 
+export const cleanInfoFilters = () => { return { type: CLEAN_INFO_FILTERS } } 

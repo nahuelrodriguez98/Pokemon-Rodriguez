@@ -1,23 +1,22 @@
 import { useDispatch } from "react-redux";
-import { CardsContainer} from "../../components/index.js";
+import { CardsContainer } from "../../components/index.js";
 import { useEffect } from "react";
 import { getAllPokemons, getTypes } from "../../redux/actions/index.js";
 import './home.style.css'
 
 
-const Home=()=>{
+const Home = () => {
     const dispatch = useDispatch();
-    useEffect(()=>{
+    useEffect(() => {
         dispatch(getAllPokemons())
         dispatch(getTypes())
-      },[dispatch])
+    }, [dispatch])
 
-    return(
+    return (
         <div className='home'>
-             <CardsContainer/>
+            <CardsContainer />
         </div>
-
     )
 }
 
-export default Home ;
+export default Home;
