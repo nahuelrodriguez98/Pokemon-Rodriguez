@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { CardsContainer } from "../../components/index.js";
 import { useEffect } from "react";
 import { getAllPokemons, getTypes } from "../../redux/actions/index.js";
-import './home.style.css'
+import './home.css'
 
 
 const Home = () => {
@@ -13,9 +13,9 @@ const Home = () => {
     }, [dispatch])
 
     return (
-        <div className='home'>
-            <CardsContainer />
-        </div>
+            <div className='home'>
+                <CardsContainer />
+            </div>
     )
 }
 
