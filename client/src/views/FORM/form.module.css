@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 
 .globalContent {
-    background-size: cover;
-    width: 100;
     height: 93vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    position: fixed;
 }
 
 .create{
@@ -37,7 +36,7 @@
     margin-top: 5px;
     border-top-right-radius: 2px;
     padding: 7px 30px;
-    box-shadow: 3px 3px 10px rgb(61, 35, 139);
+    box-shadow: -3px 3px 20px rgb(0, 0, 0);
     font-family: 'Roboto Mono', monospace;
 }
 .create img {
@@ -48,6 +47,7 @@
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
     margin: 10px;
+    
 }
 
 .create button {
@@ -60,6 +60,7 @@
     transition: all 0.2s;
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
+    box-shadow: -3px 7px 13px rgb(0, 0, 0);
 }
 
 .create button:hover {
@@ -72,34 +73,44 @@
     margin: 2%;
     height: 10px; 
     padding: 10px;    
-    background: rgba(98, 45, 223, 0.301) ;
+    background-color: rgba(116, 113, 113, 0.6);
     background-size: cover;
     border-radius: 20px;
     width: 50%;
     height: 80%;
-    box-shadow: -8px 9px 14px -3px rgb(61, 35, 139);
-    color: aliceblue;
+    box-shadow: -8px 9px 14px -3px rgba(255, 81, 0, 0.979);
+    color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
 }
 
 .validation li {
-    font-family: 'Roboto Mono', monospace;
-    font-size: .8rem;   
-    color: aliceblue;
+    font-size: 17px;   
+    color: rgb(255, 255, 255);
     height: 30px; 
+    font-family: 'Inconsolata', monospace;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2%;
+    list-style: none;
+    text-shadow: 2px 3px 6px rgb(0, 0, 0);
 }
 
 .validation p {
-    font-family: 'Roboto Mono', monospace;
-    font-size:15px;
+    font-family: 'Inconsolata', monospace;
+    font-size:20px;
     margin: 5%;
     height: 70px;
     margin: 20px;
-    text-align: justify;   
+    text-align: justify;  
+    padding-bottom: 7%; 
+    text-shadow: 2px 3px 6px rgb(0, 0, 0)
 }
 
 .validation h2{
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Inconsolata', monospace;
     margin: 5%;
+    padding-bottom: 5%;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }

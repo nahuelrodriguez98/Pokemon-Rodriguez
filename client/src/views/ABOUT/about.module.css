@@ -1,29 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
 .container {
-    margin: auto;
-    padding: 5%;
-    background-size: cover;
-    border-radius: 20px;
-    width: 60%;
-    max-width: 800px;
-    background: #f09319;
-    box-shadow: -8px 9px 14px -3px rgb(184, 132, 18);
-   
-  }
+  margin: auto;
+  padding: 5%;
+  background-size: cover;
+  border-radius: 20px;
+  width: 60%;
+  max-width: 800px;
+  background-color: rgba(116, 113, 113, 0.7);
+  box-shadow: -7px 7px 14px -4px rgb(238, 255, 0), 7px -7px 14px -4px rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+}
   
-  .content {
-    margin: auto;
-    max-width: 700px;
-    text-align: center;
-  }
+.content {
+  margin: auto;
+  max-width: 700px;
+}
   
-  .title {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
+.title {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Inconsolata', monospace;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
   
-  .description {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
+.description {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-family: 'Inconsolata', monospace;
+  text-align: justify;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}

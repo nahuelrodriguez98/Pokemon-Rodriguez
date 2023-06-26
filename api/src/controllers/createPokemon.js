@@ -2,7 +2,6 @@ const { Pokemon, Type } = require("../db");
 const { Op } = require("sequelize");
 
 const createPokemon = async (pokemonData) => {
-
   const { id, name, image, hp, attack, defense, speed, height, weight, typeOne, typeTwo } = pokemonData;
 
   const pokemonExist = await Pokemon.findAll({
@@ -19,7 +18,7 @@ const createPokemon = async (pokemonData) => {
   //Creo un nuevo pokemon con los valores ingresados por parametro
   
   const types = [ typeOne, typeTwo === null || typeTwo === undefined ? '' 
-  : typeTwo ]
+  : typeTwo ]//Si la variable "typeTwo" es null o undefined asigna una cadena vacía ('') como segundo elemento de "types". De lo contrario, asigna el valor de "typeTwo".
  
   for (const type of types) {
     const eachType = await Type.findOne({

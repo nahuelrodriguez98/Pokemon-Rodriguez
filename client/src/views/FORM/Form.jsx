@@ -151,18 +151,18 @@ const Form = () => {
             <div className={style.validation}>
                 <div className={style.title} >
                     <h2>📌 Validaciones:</h2>
-                    <p>- Deberán cumplirse las condiciones de validación para almacenar el nuevo Pokemon
+                    <p> Deberán cumplirse las condiciones de validación para almacenar el nuevo Pokemon
                         en la base de datos, de lo contrario, los datos no se guardarán.</p>
                 </div>
                 <ul >
-                    <li className={errors.name ? style.errorName : style.validName} >Name: {errors.name ? errors.name : "Información correcta."}</li>
-                    <li className={errors.image ? style.errorImg : style.validImg}>Image: {errors.image ? errors.image : "Información correcta."}</li>
-                    <li className={errors.hp ? style.errorHp : style.validHp}>Hp: {errors.hp ? errors.hp : "Información correcta."}</li>
-                    <li className={errors.attack ? style.errorAttack : style.validAttack}>Attack: {errors.attack ? errors.attack : "Información correcta."}</li>
-                    <li className={errors.defense ? style.errorDefense : style.validDefense}>Defense: {errors.defense ? errors.defense : "Información correcta."}</li>
-                    <li className={errors.speed ? style.errorSpeed : style.validSpeed}>Speed: {errors.speed ? errors.speed : "Información correcta."}</li>
-                    <li className={errors.weight ? style.errorWeight : style.validWeight}>Weight: {errors.weight ? errors.weight : "Información correcta."}</li>
-                    <li className={errors.height ? style.errorHeight : style.validHeight}>Height: {errors.height ? errors.height : "Información correcta."}</li>
+                    <li className={errors.name ? style.errorName : style.validName} >📛 Name: {errors.name ? errors.name : "Correct information."}</li>
+                    <li className={errors.image ? style.errorImg : style.validImg}>🖼️ Image: {errors.image ? errors.image : "Correct information."}</li>
+                    <li className={errors.hp ? style.errorHp : style.validHp}>❤️ Hp: {errors.hp ? errors.hp : "Correct information."}</li>
+                    <li className={errors.attack ? style.errorAttack : style.validAttack}>⚔️ Attack: {errors.attack ? errors.attack : "Correct information."}</li>
+                    <li className={errors.defense ? style.errorDefense : style.validDefense}>🛡️ Defense: {errors.defense ? errors.defense : "Correct information."}</li>
+                    <li className={errors.speed ? style.errorSpeed : style.validSpeed}>🏃 Speed: {errors.speed ? errors.speed : "Correct information."}</li>
+                    <li className={errors.weight ? style.errorWeight : style.validWeight}>⚖️ Weight: {errors.weight ? errors.weight : "Correct information."}</li>
+                    <li className={errors.height ? style.errorHeight : style.validHeight}>📏 Height: {errors.height ? errors.height : "Correct information."}</li>
                 </ul>
             </div>
 
