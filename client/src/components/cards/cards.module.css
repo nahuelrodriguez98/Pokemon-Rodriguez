@@ -45,6 +45,6 @@
 }
 .filters:hover {
     transform: scale(1.03);
-    background-color: rgb(204, 157, 3);
+    background-color: rgb(255, 251, 0);
     color: rgb(0, 0, 0);
   }
