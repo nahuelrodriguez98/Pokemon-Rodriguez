@@ -1,16 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
 .Card{
   width: 20%;
   height: 300px;
   margin: 20px;
-  background: url("https://img.freepik.com/fotos-premium/fondo-colorido-patron-triangulo_327903-2141.jpg?w=360");
-  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.507);
   border-radius: 20px;
-  box-shadow: -8px 9px 14px -3px rgba(212, 122, 19, 0.75);
-  
+  box-shadow: 0px 0px 10px rgb(243, 0, 0);
   display:flex;
   flex-direction: column;
   align-items: center;
-  
   transition: all 0.2s;
 }
 
@@ -19,13 +19,15 @@
 }
 
 .link {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration-line:none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
 }
 
 .Card h4 {
-  font-family: 'Roboto Mono', monospace;
-
+  font-family: 'Inconsolata', monospace;
+  font-size: 20px;
 }
 
 
@@ -34,16 +36,15 @@
 }
 
 .Card p {
-  background-color: #FF9B71;
+  background-color: #ffee00;
   top: 240px;
   padding: 2px 15px;
   border-radius: 10px;
-  font-size: 15px;
-  font-family: 'Roboto Mono', monospace;
+  font-size: 18px;
+  font-family: 'Inconsolata', monospace;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  
 }
-
-
-
 .Card img {
   width: 150px;
   height: 180px;

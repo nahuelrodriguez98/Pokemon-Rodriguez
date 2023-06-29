@@ -31,18 +31,19 @@ const Paginado = ({ pokemons, page, viewPage, paginado }) => {
                             : false}>Prev</button>
                     {pages.length > 0 && pages.map(pag => {
                         return (
-                            <button 
-                            className={page === pag ? style.selectedPage : ""}
+                            <button
+                                className={page === pag ? style.selectedPage : ""}
                                 key={pag}
                                 onClick={() => paginado(pag)}
                                 disabled={page === pag ? true : false}
-                                
-                                >
+                            >
                                 {pag}
-                                </button>
+                            </button>
                         )
                     })}
-                    <button className={style.NP} onClick={page < all ? () => paginado(page + 1) : null}
+                    <button
+                        onClick={page < all ? () => paginado(page + 1) : null
+                        }
                         disabled={page === all ? true
                             : false}>Next</button>
                 </div>

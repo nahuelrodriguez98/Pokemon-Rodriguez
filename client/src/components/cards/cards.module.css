@@ -41,7 +41,7 @@
     margin-top: 10px;
     font-family: 'Roboto Mono', monospace;
     transition: all 0.4s;
-
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.404);
 }
 .filters:hover {
     transform: scale(1.03);

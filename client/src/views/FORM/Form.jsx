@@ -17,9 +17,9 @@ const Form = () => {
     const [form, setForm] = useState({
         name: "",
         image: "",
-        hp: "",
-        attack: "",
-        defense: "",
+        hp: "50",
+        attack: "50",
+        defense: "50",
         speed: "",
         height: "",
         weight: "",
@@ -28,16 +28,16 @@ const Form = () => {
 
     })
     const [errors, setErrors] = useState({
-        name: "",
-        image: "",
-        hp: "",
-        attack: "",
-        defense: "",
-        speed: "",
-        height: "",
-        weight: "",
-        typeOne: "",
-        typeTwo: "",
+        name: " ",
+        image: " ",
+        hp: " ",
+        attack: " ",
+        defense: " ",
+        speed: " ",
+        height: " ",
+        weight: " ",
+        typeOne: " ",
+        typeTwo: " ",
     })
 
     const handleChange = (event) => {
@@ -91,17 +91,18 @@ const Form = () => {
 
                     <label htmlFor="hp">Hp: </label>
                     <input type="range" min="1" max="100" name="hp" onChange={handleChange} value={form.hp} />
+                    <span>{form.hp}</span>
 
                     <br />
 
                     <label htmlFor="attack">Attack: </label>
                     <input type="range" min="1" max="100" name="attack" onChange={handleChange} value={form.attack} />
-
+                    <span>{form.attack}</span>
                     <br />
 
                     <label htmlFor="defense">Defense: </label>
                     <input type="range" min="1" max="100" name="defense" onChange={handleChange} value={form.defense} />
-
+                    <span>{form.defense}</span>
                     <br />
 
                     <label htmlFor="speed">Speed: </label>
@@ -117,7 +118,7 @@ const Form = () => {
                     <label htmlFor="weight">Weight: </label>
                     <input type="number" min="1" max="100" step="1" name="weight" onChange={handleChange} value={form.weight} />
 
-                    <div>
+                    <div className={style.type}>
                         <label htmlFor="types">Type One:</label>
                         <select onChange={handleTypeOne} name='types' >
                             <option value="All" >Select</option>
@@ -129,7 +130,7 @@ const Form = () => {
                         </select>
                     </div>
 
-                    <div>
+                    <div className={style.type}>
                         <label> Type Two: </label>
                         <select onChange={handleTypeTwo} name='types' >
                             <option value="All" >Select</option>

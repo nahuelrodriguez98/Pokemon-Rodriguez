@@ -6,8 +6,9 @@
   font-size: 13px;
   color: yellow;
 }
-.selectedPage{
-  background: rgb(0, 0, 0);
+
+.selectedPage {
+  background: rgb(252, 0, 0);
   color: rgb(255, 251, 0);
 }
 
