@@ -2,15 +2,22 @@ require('dotenv').config();
 const { Sequelize } = require('sequelize');
 const fs = require('fs');// se utilizan para leer y manipular archivos y rutas de archivos.
 const path = require('path');// se utilizan para leer y manipular archivos y rutas de archivos.
-const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
+const { DB_USER, DB_PASSWORD, DB_HOST, DB_DEPLOY } = process.env;
 
-const sequelize = new Sequelize(
+/*const sequelize = new Sequelize(
    `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/pokemon`,
    {
       logging: false, // set to console.log to see the raw SQL queries
       native: false, // lets Sequelize know we can use pg-native for ~30% more speed
    }
-);//Configura la conexion a la DB
+);//Configura la conexion a la DB*/
+
+const sequelize = new Sequelize(DB_DEPLOY,
+   {
+      logging: false, // set to console.log to see the raw SQL queries
+      native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+   }
+);
 
 const basename = path.basename(__filename);
 
